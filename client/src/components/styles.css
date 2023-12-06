@@ -1,0 +1,97 @@
+{
+    margin: 0;
+    padding: 0;
+}
+
+.stars, .twinkling {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+    min-height: 100vh;
+    display:block;
+}
+
+.stars {
+    background:#000 url(https://i.postimg.cc/hhFD7Nkf/apps-47636-13819498107583324-fb06b53a-4974-4acb-85e6-f6f363f85ab6-edec48d0-ec35-4a1f-8bf5-c455987b4a.png) repeat top center;
+    z-index: 0;
+}
+
+.twinkling {
+    background-image: url(https://i.postimg.cc/CLpNr4PF/twinkling.png);
+    animation: 3s twinkle infinite;
+    animation-timing-function: linear;
+    z-index: 0;
+}
+
+@keyframes twinkle {
+    from {backrgound-position: 0}
+    to {background-position: -100px 0}
+}
+
+.navbar{
+    position: absolute;
+    width: calc(100%);
+    z-index: 1;
+}
+
+.navbar-block{
+    width: 100%;
+    max-width: 950px;
+    margin: 15px auto 10px;
+    padding: 22px 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 20px;
+    justify-content: space-between;
+    background-color: rgba(44, 44, 44, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.navbar-links{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    transition: color 2s ease;
+
+}
+
+.navbar-logo{
+    z-index: 1;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 2px;
+}
+
+.navbar-logo img{
+    width: 80px;
+}
+
+.navigation-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(145,145,145);
+    transition: color 2s ease;
+}
+
+.navigation-btn.active {
+    color: rgb(229, 229, 229);
+    transition: color 2s ease;
+
+}
+
+.navigation-btn:last-child{
+    margin-right: 0;
+}
+
+

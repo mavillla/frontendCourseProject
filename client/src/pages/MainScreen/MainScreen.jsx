@@ -1,28 +1,23 @@
 import React from "react";
-import {Link, useLocation} from "react-router-dom"
 import "./MainScreen.css";
+import SkyBackground from "../../components/SkyBackground";
+import NavBar from "../../components/NavBar";
 
-const MainScreen = () =>{
-    const location = useLocation();
+const MainScreen = () => {
+
     return (
         <div className="container">
-            <div className="navbar">
-            <Link
-                        style={{backgroundColor: location.pathname === '/' ? 'rgba(23, 23, 23, 0.80)' : 'rgba(51, 51, 51, 0.60)'}}
-                        className='navigation-btn'
-                        to={'/'}
-                    >
-                        Главная
-                    </Link>
-                    <Link
-                        style={{backgroundColor: location.pathname === '/taro' ? 'rgba(23, 23, 23, 0.80)' : 'rgba(51, 51, 51, 0.60)'}}
-                        className='navigation-btn'
-                        to={'/taro'}
-                    >
-                        Значения карт
-                    </Link>
-            </div>
-            <div className="header">
+            <SkyBackground/>
+            <NavBar/>
+            <div className="main-text">
+                <h1>Добро пожаловать</h1>
+                <p>Здесь находится уютный уголок магии и мистики онлайн-ресурс, посвященный удивительному миру карт Таро!  Здесь вы откроете для себя тайны старинного искусства гадания, где каждая карта несет в себе глубокие символы и мудрость веков.
+
+                    Углубитесь в путешествие по арканам, изучайте значение каждой карты, раскрывайте тайны их комбинаций. Наш сайт предоставляет уникальную возможность погрузиться в разнообразные расклады, расшифровать послания карт, и пролить свет на вопросы вашего сердца.
+
+                    От начинающих эзотериков до опытных магов Таро – здесь каждый найдет что-то свое. Делимся знаниями, опытом и вдохновением, чтобы помочь вам расшифровать таинственный язык карт и пройти свой уникальный путь самопознания.
+
+                    Погрузитесь в волшебство карт Таро, и пусть каждая карта раскроет перед вами новую главу вашей удивительной жизни!</p>
             </div>
         </div>
     )

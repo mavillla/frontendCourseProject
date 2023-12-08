@@ -6,76 +6,6 @@
     align-items: center;
 }
 
-.tarot-card {
-    /*border: 1px solid #ccc;*/
-    background-color: rgba(19, 19, 19, 0.8);
-    padding: 10px 25px;
-    margin: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    border-radius: 15px;
-    backdrop-filter: blur(1px);
-    color: gray;
-}
-
-.tarot-card:hover {
-    background-color: #1f1f1f;
-}
-
-.tarot-card img {
-    width: 100px;
-    height: 100px;
-    margin-right: 10px;
-}
-
-.card-info {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-.card-title{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.card-description{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-}
-
-/*.card-description img {*/
-/*    transition: transform 0.3s; !* Плавный переход для эффекта *!*/
-/*}*/
-
-/*.card-description:hover img {*/
-/*    transform: scale(1.15); !* Увеличение изображения при наведении на контейнер *!*/
-/*}*/
-
-.card-title-ico {
-    margin-top: 30px;
-    display: inline-block;
-    max-height: 20px;
-    cursor: pointer;
-}
-
-.expanded {
-    max-height: 200px;
-    overflow: hidden;
-    color: #b2b2b2;
-}
-
-.tarot-card-list{
-    margin: 0 15px 0;
-    width: 100%;
-    max-width: 1020px;
-    z-index: 1;
-}
-
 .tarot-text {
    margin: 100px 0 10px;
 }
@@ -84,12 +14,12 @@
     margin: 10px 0 30px 0;
     width: 100%;
     max-width: 960px;
-    padding: 10px 15px; 
+    padding: 10px 15px; /* Внутренний отступ */
     background: rgba(0, 0, 0, 0.5);
     border: 2px solid #3d3d3d;
-    border-radius: 10px;
+    border-radius: 10px; /* Скругляем углы */
     color: #3d3d3d;
-    font-size: 18px;
+    font-size: 18px; /* Размер шрифта */
     letter-spacing: 1px;
     caret-shape: inherit;
     transition: 0.3s;
@@ -109,5 +39,4 @@
 .converter-container-column__inputs:focus::-webkit-input-placeholder {
     margin-top: -10px;
     color: transparent;
-
 }

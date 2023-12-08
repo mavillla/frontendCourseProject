@@ -1,3 +1,4 @@
+/*StarBackground*/
 {
     margin: 0;
     padding: 0;
@@ -31,6 +32,8 @@
     to {background-position: -100px 0}
 }
 
+/*NavBar*/
+
 .navbar{
     position: absolute;
     width: calc(100%);
@@ -47,7 +50,7 @@
     align-items: center;
     border-radius: 20px;
     justify-content: space-between;
-    background-color: rgba(44, 44, 44, 0.8);
+    background: rgba(44, 44, 44, 0.8);
     backdrop-filter: blur(10px);
 }
 
@@ -95,3 +98,82 @@
 }
 
 
+/*TaroCardList*/
+
+
+.tarot-card {
+    /*border: 1px solid #ccc;*/
+    background-color: rgba(19, 19, 19, 0.8);
+    padding: 10px 25px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Плавный переход при раскрытии/скрытии */
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    backdrop-filter: blur(1px);
+    color: gray;
+}
+
+.tarot-card:hover {
+    background-color: #1f1f1f;
+}
+
+.tarot-card img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-description{
+    display: flex;
+    padding: 0 0 15px 0;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.card-description-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*.card-description img {*/
+/*    transition: transform 0.3s; !* Плавный переход для эффекта *!*/
+/*}*/
+
+/*.card-description:hover img {*/
+/*    transform: scale(1.15); !* Увеличение изображения при наведении на контейнер *!*/
+/*}*/
+
+.card-title-ico {
+    margin-top: 30px;
+    display: inline-block;
+    max-height: 20px;
+    cursor: pointer;
+}
+
+.expanded {
+    max-height: 200px;
+    overflow: hidden;
+    color: #b2b2b2;
+}
+
+.tarot-card-list{
+    margin: 0 15px 0;
+    width: 100%;
+    max-width: 1020px;
+    z-index: 1;
+}

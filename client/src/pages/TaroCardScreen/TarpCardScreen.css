@@ -1,0 +1,54 @@
+.taro-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 155px 0 10px;
+    width: 100%;
+    max-width: 1020px;
+    z-index: 1;
+}
+
+.taro-img-card {
+    width: 200px;
+    height: 300px;
+    padding: 25px;
+    border-radius: 5px;
+    overflow: hidden;
+    background: rgba(44, 44, 44, 0.9);
+}
+
+.taro-img-card img {
+    width: 200px;
+    height: 300px;
+
+    border-radius: 5px;
+}
+
+.taro-main-text {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 30px auto 10px;
+    padding: 25px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 20px;
+    backdrop-filter: blur(1px);
+    color: rgb(229, 229, 229);
+}
+
+.taro-main-text h1, h2 {
+    margin: 0;
+    color: rgb(201, 201, 201);
+    text-align: left;
+}
+
+.taro-main-text p {
+    color: rgb(189, 189, 189);
+    font-size: 18px;
+    line-height: 25px;
+    text-align: left;
+}

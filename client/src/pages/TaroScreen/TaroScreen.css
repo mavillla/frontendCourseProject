@@ -10,7 +10,7 @@
    margin: 100px 0 10px;
 }
 
-.converter-container-column__inputs{
+.search-input{
     margin: 10px 0 30px 0;
     width: 100%;
     max-width: 960px;
@@ -26,17 +26,17 @@
     z-index: 1;
 }
 
-.converter-container-column__inputs:focus{
+.search-input:focus{
     background: rgba(84, 84, 84, 0.1);
     color: rgb(201, 201, 201);
 }
 
-.converter-container-column__inputs::-webkit-input-placeholder {
+.search-input::-webkit-input-placeholder {
     margin-top: -10px;
     color: #3d3d3d;
 }
 
-.converter-container-column__inputs:focus::-webkit-input-placeholder {
+.search-input:focus::-webkit-input-placeholder {
     margin-top: -10px;
     color: transparent;
 }

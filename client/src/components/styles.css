@@ -1,22 +1,24 @@
 /*StarBackground*/
 {
-    margin: 0;
-    padding: 0;
+    margin: 0
+;
+    padding: 0
+;
 }
 
 .stars, .twinkling {
-    position:fixed;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    width:100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
     min-height: 100vh;
-    display:block;
+    display: block;
 }
 
 .stars {
-    background:#000 url(https://i.postimg.cc/hhFD7Nkf/apps-47636-13819498107583324-fb06b53a-4974-4acb-85e6-f6f363f85ab6-edec48d0-ec35-4a1f-8bf5-c455987b4a.png) repeat top center;
+    background: #000 url(https://i.postimg.cc/hhFD7Nkf/apps-47636-13819498107583324-fb06b53a-4974-4acb-85e6-f6f363f85ab6-edec48d0-ec35-4a1f-8bf5-c455987b4a.png) repeat top center;
     z-index: 0;
 }
 
@@ -28,19 +30,23 @@
 }
 
 @keyframes twinkle {
-    from {backrgound-position: 0}
-    to {background-position: -100px 0}
+    from {
+        backrgound-position: 0
+    }
+    to {
+        background-position: -100px 0
+    }
 }
 
 /*NavBar*/
 
-.navbar{
+.navbar {
     position: absolute;
     width: calc(100%);
     z-index: 1;
 }
 
-.navbar-block{
+.navbar-block {
     width: 100%;
     max-width: 950px;
     margin: 15px auto 10px;
@@ -54,7 +60,7 @@
     backdrop-filter: blur(10px);
 }
 
-.navbar-links{
+.navbar-links {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -64,18 +70,18 @@
 
 }
 
-.navbar-logo{
+.navbar-logo {
     z-index: 1;
     cursor: pointer;
     text-decoration: none;
     margin-top: 2px;
 }
 
-.navbar-logo img{
+.navbar-logo img {
     width: 80px;
 }
 
-.navigation-btn{
+.navigation-btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,7 +89,7 @@
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;
-    color: rgba(145,145,145);
+    color: rgba(145, 145, 145);
     transition: color 2s ease;
 }
 
@@ -93,7 +99,7 @@
 
 }
 
-.navigation-btn:last-child{
+.navigation-btn:last-child {
     margin-right: 0;
 }
 
@@ -125,26 +131,36 @@
     margin-right: 10px;
 }
 
+.taro-item-img {
+    width: 80px;
+    height: 120px;
+}
+
+.taro-item-img img {
+    width: 64px;
+    height: 116px;
+}
+
 .card-info {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
 
-.card-title{
+.card-title {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-.card-description{
+.card-description {
     display: flex;
     padding: 0 0 15px 0;
     flex-direction: row;
     align-items: flex-start;
 }
 
-.card-description-text{
+.card-description-text {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -166,14 +182,72 @@
 }
 
 .expanded {
-    max-height: 200px;
+    max-height: none;
     overflow: hidden;
     color: #b2b2b2;
 }
 
-.tarot-card-list{
+.tarot-card-list {
     margin: 0 15px 0;
     width: 100%;
     max-width: 1020px;
     z-index: 1;
 }
+
+
+/*Расклады*/
+
+.spread-description {
+    display: flex;
+    padding: 0 0 15px 0;
+    flex-direction: column;
+    align-items: center;
+    transition: max-height 0.3s ease;
+}
+
+.spread-description-image {
+    max-width: 100%; /* Максимальная ширина для изображения в пределах своего контейнера */
+    height: auto;
+}
+
+.spread-description-image img {
+    width: 100%;
+    height: auto;
+}
+
+.spread-description p {
+    text-align: left;
+    white-space: pre-line;
+}
+
+.spread-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.spread-title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.spread-title-ico {
+    margin-top: 30px;
+    display: inline-block;
+    max-height: 20px;
+    cursor: pointer;
+}
+
+.spread-separator{
+    border-top: 1px solid #b2b2b2;
+    margin: 10px 0;
+}
+
+.spread-card-list {
+    margin: 0 15px 0;
+    width: 100%;
+    max-width: 1020px;
+    z-index: 1;
+}
+

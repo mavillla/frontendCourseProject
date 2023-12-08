@@ -1,18 +1,18 @@
 import React from 'react';
-import {Link} from "react-router-dom";
 import "./styles.css"
 
-const TaroItem = ({card, index, expandedIndex, handleCardClick, location}) => {
+const SpreadItem = ({spread, index, expandedIndex, handleSpreadClick}) => {
+
     return (
         <div
             key={index}
             className={`tarot-card ${expandedIndex === index ? 'expanded' : ''}`}
-            onClick={() => handleCardClick(index)}
+            onClick={() => handleSpreadClick(index)}
         >
-            <div className="card-info">
-                <div className="card-title">
-                    <h3>{card.title}</h3>
-                    <div className={`card-title-ico ${expandedIndex === index ? 'rotate' : ''}`}>
+            <div className="spread-info">
+                <div className="spread-title">
+                    <h3>{spread.title}</h3>
+                    <div className={`spread-title-ico ${expandedIndex === index ? 'rotate' : ''}`}>
                                     <span style={{
                                         display: 'inline-block',
                                         width: '3px',
@@ -35,31 +35,25 @@ const TaroItem = ({card, index, expandedIndex, handleCardClick, location}) => {
                     </div>
                 </div>
                 {expandedIndex === index &&
-                    <div className="card-description">
-                        <div className="taro-item-img">
-                            <img src={card.image} alt={card.title}/>
-                        </div>
-                        <div className="card-description-text">
-                            <p style={{margin: 0}}>{card.description}</p>
-                            <div style={{
-                                marginTop: "20px",
-                                cursor: "pointer",
-                            }}>
-                                <Link to={`${location.pathname}/${card.link}`}
-                                      style={{
-                                          textDecoration: "none",
-                                          color: "white"
-                                      }}
-                                >
-                                    Посмотреть подробнее
-                                </Link>
+                    spread.spreads.map((item, subIndex) => {
+                        return (
+                            <div className="spread-description" key={subIndex}>
+                                <h4>{item.spread_title}</h4>
+                                <p>{item.spread_description}</p>
+                                <div className="spread-description-image">
+                                    <img src={item.spread_image} alt={item.spread_title}/>
+                                </div>
+                                <p>{item.spread_explanation}</p>
+                                {subIndex !== spread.spreads.length - 1 && (
+                                    <hr style={{color:"#b2b2b2", width:"100%", margin:"35px 0 5px 0"}}></hr>
+                                )}
                             </div>
-                        </div>
-                    </div>
+                        )
+                    })
                 }
             </div>
         </div>
     );
 };
 
-export default TaroItem;
+export default SpreadItem;

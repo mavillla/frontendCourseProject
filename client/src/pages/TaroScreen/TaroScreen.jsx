@@ -20,7 +20,7 @@ const TaroScreen = () => {
                     направить вас на вашем уникальном пути самопознания. Каждая карта представлена в виде карточки,
                     которую можно раскрыть, чтобы увидеть более подробное описание.</p>
             </div>
-            <input className='converter-container-column__inputs'
+            <input className='search-input'
                    type="text"
                    placeholder={"Введите название искомой карты"}
                    value={searchValue}

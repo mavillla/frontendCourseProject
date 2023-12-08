@@ -11,10 +11,9 @@ const TaroCardScreen = () => {
     const [card, setCard] = useState(null)
 
     useEffect(() => {
-        console.log(params)
         setCard(tarotCards.tarot_cards.find((card) => card.link === params.link));
         console.log(card)
-    }, [])
+    },[])
 
 
     return (
